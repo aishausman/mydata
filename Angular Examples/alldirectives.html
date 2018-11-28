@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script type="text/javascript" src="angular.min.js"></script>
+</head>
+
+<body>
+<div ng-app="" ng-init="med=0;fue=0;acc=0;gs=0;ts=0;cs=0;">
+<input type="number" ng-model="bsTxt"/><br/>
+Allowances
+Medical      5% = <label ng-bind="med= bsTxt*5/100">{{med}}</label><br/>
+Accomodation 6% = <label ng-bind="acc= bsTxt*6/100">{{acc}}</label><br/>
+Fuel         7% = <label ng-bind="fue= bsTxt*7/100">{{fue}}</label><br/>
+Gross Salary    = <label ng-bind="gs=med+fue+acc">{{gs}}</label><br/>
+Net Salary    = <label ng-bind="cs=bsTxt">{{cs}}</label><br/>
+Total Salary    = <label ng-bind="ts = gs+cs">{{ts}}</label><br/>
+
+
+</div>
+</body>
+</html>

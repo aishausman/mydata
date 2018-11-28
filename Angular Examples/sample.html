@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="angular.min.js"></script>
+</head>
+<body>
+
+<div ng-app="myapp" ng-controller="myctrl">
+<input type="text" name="" ng-model="search">	
+<table>
+	<tr ng-repeat="x in names | filter:search">
+		
+		<td>{{x}}</td>
+	</tr>
+
+
+</table>
+</div>
+
+<script type="text/javascript">
+	var app = angular.module('myapp', []);
+app.controller('myctrl', function($scope){
+
+
+	$scope.names=['Aisha','Sadia','Saba'];
+	
+});
+
+
+</script>
+
+</body>
+</html>

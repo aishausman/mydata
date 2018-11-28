@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="angular.min.js"></script>
+</head>
+
+<body>
+<div ng-app="myapp" ng-controller= "myctrl">
+Enter the name for searching
+<input type="text" ng-model="Searchfilter">
+
+<table border="1" width="1000" height="500">
+<tr>
+<td>Id </td>
+<td> Name </td>
+<td> price </td>
+
+</tr>
+<tr ng-repeat = 'x in names | filter:Searchfilter'>
+<td ng-repeat = 'col in x'>{{col}}</td>
+
+</tr>
+</table>
+
+
+
+<ul>
+<li ng-repeat = 'x in names'>
+{{x|uppercase}}
+
+</li>
+</ul>
+
+</div>
+<script>
+var app = angular.module('myapp',[]);
+app.controller('myctrl',function($scope){
+	$scope.names = [['1','C Programming','2300'],['1','php','2300'],['1','java','2300'],['1','angular','2300'],['1','db','2300']];
+	
+	
+	});
+</script>
+</body>
+
+
+</html>

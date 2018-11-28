@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="angular.min.js"></script>
+</head>
+
+<body>
+<div ng-app="">
+<nav>
+<a href="#" ng-click="active='home'">Home</a>
+<a href="#" ng-click="active='About'">About</a>
+<a href="#" ng-click="active='Contact'">Contact</a>
+
+
+
+</nav>
+
+
+<p ng-hide="active">choose your menu</p>
+<p ng-show="active"> you choose {{active}} </p>
+</div>
+
+
+
+</body>
+</html>

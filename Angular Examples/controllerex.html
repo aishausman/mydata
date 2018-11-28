@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script src="angular.min.js"></script>
+</head>
+
+<body>
+<div ng-app="myapp" ng-controller="myctrl">
+
+Enter cost<input type="number" ng-model = "cost"/>
+Enter Quantity <input type="number" ng-model="qty"/>
+<input type="button" ng-click = "pay();">
+
+
+
+{{total | currency : 'Rs'}}
+
+</div>
+
+<script>
+var app = angular.module("myapp",[]);
+app.controller("myctrl",function($scope){
+	$scope.qty = 0;
+	$scope.cost = 0;
+	$scope.total = 0;
+	$scope.pay = function(){
+		this.total = this.qty*this.cost;
+		};
+	
+	
+	
+	
+	});
+
+
+
+
+
+
+</script>
+</body>
+</html>
